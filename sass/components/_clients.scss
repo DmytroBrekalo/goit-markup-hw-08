@@ -1,24 +1,39 @@
 .clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: $desc){
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .clients__title {
     color: var(--title-text-color);
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @media screen and (min-width: $desc) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
 }
 
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
+
+    @media screen and (min-width: $desc) {
+        display: flex;
+        gap: 30px;
+    }
 }
 
 .clients__link {
     display: flex;
     border: 1px solid #AFB1B8;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border-radius: 4px;
     align-items: center;
@@ -37,6 +52,15 @@
                 fill: var(--accent-color);
             }
         }
+
+        @media screen and (min-width: $tabl) {
+                width: 226px;
+        }
+
+        @media screen and (min-width: $desc) {
+                width: 170px;
+               
+        }              
 }
 
 .clients__icon {

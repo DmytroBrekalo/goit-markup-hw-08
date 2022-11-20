@@ -7,10 +7,22 @@ body {
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
     margin: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media screen and (min-width: $mob) {
+        width: $mob;
+    }
+
+    @media screen and (min-width: $tabl) {
+        width: $tabl;
+    }
+
+    @media screen and (min-width: $desc) {
+        width: $desc;
+    }
 }
 
 .visually-hidden {
