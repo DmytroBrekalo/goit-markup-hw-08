@@ -6,7 +6,43 @@
 
 .footer-content {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+
+    @media screen and (min-width: $tabl) {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    
+    @media screen and (min-width: $desc) {
+            justify-content: unset;
+            flex-wrap: nowrap;
+        }
+}
+
+.page-foot__logo{
+    color: var(--accent-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    text-decoration-line: none;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $desc) {
+        font-size: 26px;
+        line-height: 1.19;
+        text-align: left;
+        }
+}
+
+.page-foot__address-block{
+    text-align: center;
 }
 
 .page-foot__logo .page-foot__accent {
@@ -15,7 +51,6 @@
 
 .address-list {
     font-style: inherit;
-    margin-top: 20px;
 }
 
 .address-list__contact .address-list__link {
@@ -36,19 +71,22 @@
     color: var(--white-color);
     line-height: 1.71;
     text-decoration-line: none;
-    margin-bottom: 9px;
 }
 
 .address-list__contact .address-list__item+.address-list__item {
-    margin-top: 9px;
-}
+    margin-top: 8px;
 
-.contact-foot {
-    margin-top: 20px;
+    @media screen and (min-width: $desc) {
+        margin-top: 9px;
+    }
 }
 
 .social-foot {
+    text-align: center;
+
+    @media screen and (min-width: $desc) {
     margin-left: 70px;
+    }
 }
 
 .social-foot__title,
@@ -57,7 +95,12 @@
     font-weight: 700;
     line-height: 1.14;
     color: var(--white-color);
-    text-align: left;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $desc) {
+            text-align: left;
+        }
 }
 
 .social-foot__links {
@@ -91,22 +134,32 @@
 }
 
 .footer-form {
-    margin-left: 93px;
-}
+    width: 100%;
+    
+        @media screen and (min-width: $tabl) and (max-width: $pre-desc) {
+            max-width: 450px;}
+        @media screen and (min-width: $desc) {
+                    margin-left: 93px;
+                }
+            }
 
 .footer-form__form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    @media screen and (min-width: $desc) {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
 }
 
 .footer-form__input {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    width: 358px;
+    width: 100%;
     height: 50px;
     background-color: #2F303A;
     padding: 15px 16px;
+    margin-bottom: 20px;
     color: var(--white-color);
 
     &::placeholder {
@@ -117,6 +170,9 @@
         align-items: center;
         color: rgba(255, 255, 255, 0.6);
     }
+        @media screen and (min-width: $desc) {
+            width: 358px;
+        }
 }
 
 .footer-form__button {
@@ -134,7 +190,7 @@
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--white-color);
-    margin-left: 12px;
+    margin: 0 auto;
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 250ms;
