@@ -442,6 +442,11 @@ button {
 .work {
   padding-bottom: 94px;
 }
+@media screen and (max-width: 1200px) {
+  .work {
+    display: none;
+  }
+}
 
 .work__list {
   display: flex;
