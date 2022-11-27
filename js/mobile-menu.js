@@ -10,6 +10,6 @@
 
     function toggleMenu() {
 		refs.menu.classList.toggle("is-hide");
-		document.querySelector('body').classList.toggle('is-hidden');
+		document.querySelector('body').classList.toggle('hidden');
     }
 })();

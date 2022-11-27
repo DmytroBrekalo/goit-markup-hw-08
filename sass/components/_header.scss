@@ -11,18 +11,18 @@
     color: var(--accent-color);
     font-family: Raleway, sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     text-decoration-line: none;
     padding: 15px 0 16px;
 
     @media screen and (min-width: $tabl) {
-        line-height: 1.29;
         padding: 26px 0;
         margin-right: 87px;
     }
     
     @media screen and (min-width: $desc) {
+        line-height: 1.29;
         padding: 24px 0 25px 0;
         margin-right: 92px;
     }
@@ -44,58 +44,77 @@
 
 .site-nav {
     display: flex;
-    margin-left: 93px;
+    flex-direction: column;
+
+    @media screen and (min-width: $tabl) {
+            flex-direction: row;
+        }
 }
 
-.site-nav__item+.site-nav__item {
-    margin-left: 50px;
+.site-nav__item {
+    margin-bottom: 32px;
+    
+        @media screen and (min-width: $tabl) {
+            margin-bottom: 0;
+    
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
 }
 
-.site-nav__link,
-.contact__link {
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration-line: none;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .site-nav__link {
-    position: relative;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    display: inline-block;
     color: var(--title-text-color);
-    &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -1px;
-            display: block;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color var(--general-transition-effect);
+    
+        @media screen and (min-width: $tabl) {
+            position: relative;
+            font-size: 14px;
+            line-height: 1.16;
+            padding: 32px 0;
+    
+            &:focus::after,
+            &:hover::after {
+                left: 0;
+                width: 100%;
+            }
+    
+            &::after {
+                position: absolute;
+                content: "";
+                right: 0;
+                bottom: -1px;
+                height: 4px;
+                width: 0%;
+                border-radius: 2px;
+                background-color: var(--accent-color);
+                transition: width var(--general-transition-effect);
+            }
+        }
+    
+        &:focus,
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+    
+    .site-nav__link--current {
+        color: var(--accent-color);
+    
+        &::after {
             width: 100%;
-            height: 4px;
-            background-color: var(--accent-color);
-            border-radius: 2px;
-            opacity: 0;
-        }
-        &:hover,
-        &focus{
-                color: var(--accent-color);
-        }
-}    
-
-.site-nav__link.current {
-    color: var(--accent-color);
-    &::after {
-            opacity: 1;
         }
 }
 
 .contact {
     display: flex;
-    margin-left: auto;
     flex-direction: column-reverse;
     margin-bottom: 64px;
     
@@ -109,29 +128,122 @@
         }
 }
 
-.contact__item+.contact__item {
-    margin-left: 50px;
+.contact__item {
+    @media screen and (max-width: $pre-tabl) {
+        &:not(:first-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media screen and (min-width: $tabl) {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (min-width: $desc) {
+        &:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+    }
 }
 
 .contact__link {
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.02em;
     display: flex;
-    gap: 10px;
-    align-items: center;
     color: var(--main-color);
-    &:hover,
-    &focus {
-        color: var(--accent-color);
-        .contact__icon {
-                fill: var(--accent-color);
-        } 
+    transition: color var(--general-transition-effect);
+    
+        &:focus,
+        &:hover {
+            color: var(--accent-color);
         }
-}
+
+        &.number {
+            font-size: 34px;
+            line-height: 40px;
+        
+            @media screen and (max-width: $pre-tabl) {
+                color: #2196f3;
+                }
+        
+            @media screen and (min-width: $tabl) {
+                align-items: center;
+                font-size: 12px;
+                line-height: 1.16;
+                padding-bottom: 20px;
+                }
+        
+            @media screen and (min-width: $desc) {
+                font-size: 14px;
+                line-height: 1.14;
+                padding: 32px 0;
+                }
+        }
+        
+        &.mail {
+            font-size: 24px;
+            line-height: 28px;
+        
+            @media screen and (min-width: $tabl) {
+                align-items: center;
+                font-size: 12px;
+                line-height: 1.16;
+                padding-top: 20px;
+                }
+    
+            @media screen and (min-width: $desc) {
+                font-size: 14px;
+                line-height: 1.14;
+                padding: 32px 0;
+                }
+        }
+    }
+    
 
 .contact__icon {
-    fill: var(--main-color);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+    fill: currentColor;
+
+    @media screen and (min-width: $tabl) {
+        display: inline;
+        margin-right: 8px;
+    }
+
+    @media screen and (min-width: $desc) {
+        margin-right: 10px;
+    }
+}
+
+.contact__link.mail {
+    &>.contact__icon {
+        @media screen and (min-width: $tabl) {
+            width: 14px;
+            height: 10px;
+        }
+
+        @media screen and (min-width: $desc) {
+            width: 16px;
+            height: 12px;
+        }
+    }
+}
+
+.contact__link.number {
+    &>.contact__icon {
+        @media screen and (min-width: $tabl) {
+            width: 10px;
+            height: 14px;
+        }
+
+        @media screen and (min-width: $desc) {
+            width: 10px;
+            height: 16px;
+        }
+    }
 }
 
 
@@ -140,6 +252,11 @@
     background-color: transparent;
     margin-right: 0;
     margin-left: auto;
+    font-family: "Roboto";
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     
     @media screen and (min-width: $tabl) {
         display: none;
@@ -152,6 +269,8 @@
     right: 15px;
     display: flex;
     background-color: transparent;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
     
         &:hover,
@@ -169,40 +288,6 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 10px;
-}
-
-@media screen and (max-width: $pre-tabl) {
-    .head-list__side-menu {
-        z-index: 10;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        overflow-y: auto;
-        overflow-x: hidden;
-        background-color: var(--white-color);
-        opacity: 1;
-        transform: translateX(0%);
-        transition: transform .25s cubic-bezier(0.4, 0, 0.2, 1), opacity .25s cubic-bezier(0.4, 0, 0.2, 1);
-
-        padding: 48px 40px;
-        display: flex;
-        flex-direction: column;
-
-        &.is-hide {
-            opacity: 0;
-            transform: translateX(100%);
-            pointer-events: none;
-        }
-    }
-}
-
-@media screen and (min-width: $tabl) {
-    .head-list__side-menu {
-        display: flex;
-        width: 100%;
-    }
 }
 
 .community {
@@ -236,5 +321,41 @@
         background-color: rgba(33, 33, 33, 0.2);
         width: 1px;
         height: 100%;
+    }
+}
+
+@media screen and (max-width: $pre-tabl) {
+    .head-list__side-menu {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: var(--white-color);
+        opacity: 1;
+        transform: translateX(0%);
+        transition: transform var(--general-transition-effect), opacity var(--general-transition-effect);
+
+        padding: 48px 40px;
+        display: flex;
+        flex-direction: column;
+
+
+        &.is-hide {
+            opacity: 0;
+            transform: translateX(100%);
+            pointer-events: none;
+        }
+    }
+}
+
+
+@media screen and (min-width: $tabl) {
+    .head-list__side-menu {
+        display: flex;
+        width: 100%;
     }
 }

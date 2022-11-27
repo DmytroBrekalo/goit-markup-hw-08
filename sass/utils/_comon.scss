@@ -10,22 +10,24 @@ body.is-hidden {
     overflow-y: hidden;
 }
 
+button {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 .container {
-    width: 100%;
-    margin: auto;
+    max-width: 480px;
+    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 
-    @media screen and (min-width: $mob) {
-        width: $mob;
-    }
-
     @media screen and (min-width: $tabl) {
-        width: $tabl;
+        max-width: $tabl;
     }
 
     @media screen and (min-width: $desc) {
-        width: $desc;
+        max-width: $desc;
     }
 }
 
