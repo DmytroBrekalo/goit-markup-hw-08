@@ -568,34 +568,34 @@ button {
   padding: 118px 0;
   margin: 0 auto;
   max-width: 480px;
-  background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../../images/hero-480.jpg") no-repeat center/cover, var(--hero-image-background-color);
+  background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../images/hero-480.jpg") no-repeat center/cover, var(--hero-image-background-color);
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero__image-wraper {
-    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../../images/hero-480@2x.jpg") no-repeat center/cover, var(--hero-image-background-color);
+    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../images/hero-480@2x.jpg") no-repeat center/cover, var(--hero-image-background-color);
   }
 }
 @media screen and (min-width: 768px) {
   .hero__image-wraper {
     max-width: 768px;
-    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../../images/hero-768.jpg") no-repeat center/cover, var(--hero-image-background-color);
+    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../images/hero-768.jpg") no-repeat center/cover, var(--hero-image-background-color);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero__image-wraper {
-    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../../images/hero-768@2x.jpg") no-repeat center/cover, var(--hero-image-background-color);
+    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../images/hero-768@2x.jpg") no-repeat center/cover, var(--hero-image-background-color);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__image-wraper {
     padding: 200px 0;
     max-width: 1600px;
-    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../../images/hero-1200.jpg") no-repeat center/cover, var(--hero-image-background-color);
+    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../images/hero-1200.jpg") no-repeat center/cover, var(--hero-image-background-color);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero__image-wraper {
-    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../../images/hero-1200@2x.jpg") no-repeat center/cover, var(--hero-image-background-color);
+    background: linear-gradient(var(--hero-image-overlay), var(--hero-image-overlay)), url("../images/hero-1200@2x.jpg") no-repeat center/cover, var(--hero-image-background-color);
   }
 }
 
