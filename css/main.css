@@ -653,7 +653,7 @@ button {
   background-color: #188CE8;
 }
 @media screen and (min-width: 1200px) {
-  .button:hover {
+  .button {
     padding: 10px 32px;
   }
 }
