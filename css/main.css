@@ -1168,15 +1168,32 @@ button {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding: 94px 0;
+  }
 }
 
 .filters {
   display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-  justify-content: center;
+  column-gap: 8px;
+  row-gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 50px;
+  }
 }
 
 .filters .filters__item + .filters__item {
@@ -1202,6 +1219,11 @@ button {
   background-color: var(--accent-color);
   color: var(--white-color);
   box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+@media screen and (min-width: 768px) {
+  .filters__button {
+    padding: 6px 22px;
+  }
 }
 
 /* cards */
