@@ -43,6 +43,10 @@
 
 .page-foot__address-block{
     text-align: center;
+
+    @media screen and (min-width: $desc) {
+        text-align: left;
+    }
 }
 
 .page-foot__logo .page-foot__accent {

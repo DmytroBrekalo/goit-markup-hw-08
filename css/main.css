@@ -696,21 +696,8 @@ button {
   background: #F5F4FA;
   border-radius: 4px;
   margin-bottom: 30px;
-  width: 450px;
-  min-height: 226px;
+  height: 120px;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .thumb {
-    width: 354px;
-    min-height: 226px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .thumb {
-    width: 270px;
-    min-height: 120px;
-  }
 }
 
 .feature__title {
@@ -1003,6 +990,11 @@ button {
 .page-foot__address-block {
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .page-foot__address-block {
+    text-align: left;
+  }
+}
 
 .page-foot__logo .page-foot__accent {
   color: var(--white-color);
@@ -1196,12 +1188,8 @@ button {
   }
 }
 
-.filters .filters__item + .filters__item {
-  margin-left: 8px;
-}
-
 .filters__button {
-  padding: 6px 22px;
+  padding: 6px 25px;
   border-color: transparent;
   background-color: #F5F4FA;
   color: var(--title-text-color);

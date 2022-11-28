@@ -33,19 +33,18 @@
     background: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
-    width: 450px;
-    min-height: 226px;
+    height: 120px;
     text-align: center;
 
-    @media screen and (min-width: $tabl){
-        width: 354px;
-        min-height: 226px;  
-    }
+    // @media screen and (min-width: $tabl){
+    //     width: 354px;
+    //     min-height: 226px;  
+    // }
 
-    @media screen and (min-width: $desc){
-        width: 270px;
-        min-height: 120px;
-    }
+    // @media screen and (min-width: $desc){
+    //     width: 270px;
+    //     min-height: 120px;
+    // }
 }
 
 .feature__title {
