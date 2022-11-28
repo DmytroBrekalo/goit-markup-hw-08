@@ -14,43 +14,70 @@
   <body>
     <header class="head-list">
       <div class="container main-nav">
-        <nav class="head-list__nav">
-          <a href="index.html" class="head-list__logo">
-            Web<span class="head-list__accent">Studio</span>
-          </a>
-
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="index.html" class="site-nav__link">Студія</a>
+        <a href="index.html" class="head-list__logo">
+          Web<span class="head-list__accent">Studio</span>
+        </a>
+        <div class="head-list__side-menu is-hide" data-menu>
+          <nav class="head-list__nav">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="index.html" class="site-nav__link">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a
+                  href="portfolio.html"
+                  class="site-nav__link site-nav__link--current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="#" class="site-nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact">
+            <li class="contact__item">
+              <a href="mailto:info@devstudio.com" class="contact__link mail">
+                <svg class="contact__icon email" width="16" height="12">
+                  <use href="./images/icons.svg#email"></use>
+                </svg>
+                <span>info@devstudio.com</span>
+              </a>
             </li>
-            <li class="site-nav__item">
-              <a href="portfolio.html" class="site-nav__link current"
-                >Портфоліо</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link">Контакти</a>
+            <li class="contact__item">
+              <a href="tel:+380961111111" class="contact__link number">
+                <svg class="contact__icon smartphone" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                <span>+38 096 111 11 11 </span>
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contact">
-          <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link">
-              <svg class="contact__icon email" width="16" height="12">
-                <use href="./images/icons.svg#email"></use>
-              </svg>
-              <span>info@devstudio.com</span>
-            </a>
-          </li>
-          <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link">
-              <svg class="contact__icon smartphone" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              <span>+38 096 111 11 11 </span>
-            </a>
-          </li>
-        </ul>
+          <ul class="head-list__community community">
+            <li class="community__item">
+              <a href="#" class="community__link">Instagram</a>
+            </li>
+            <li class="community__item">
+              <a href="#" class="community__link">Twitter</a>
+            </li>
+            <li class="community__item">
+              <a href="#" class="community__link">Facebook</a>
+            </li>
+            <li class="community__item">
+              <a href="#" class="community__link">LinkedIn</a>
+            </li>
+          </ul>
+          <button class="head-list__close-menu" type="button" data-menu-close>
+            <svg class="head-list__menu-icon" width="40" height="40">
+              <use href="./images/icons.svg#close-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="head-list__open-menu" type="button" data-menu-open>
+          <svg class="head-list__menu-icon" width="40" height="40">
+            <use href="./images/icons.svg#open-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -80,7 +107,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po1.jpg" alt="Ноутбук" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/technocrack-480.webp    1x,
+                        ./images/portfolio/technocrack-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/technocrack-768.webp    1x,
+                        ./images/portfolio/technocrack-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/technocrack-1200.webp    1x,
+                        ./images/portfolio/technocrack-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/technocrack-1200.jpg    1x,
+                        ./images/portfolio/technocrack-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/technocrack-1200.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -96,7 +159,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po2.jpg" alt="Баскетболісти" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orlean-480.webp    1x,
+                        ./images/portfolio/poster-new-orlean-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orlean-768.webp    1x,
+                        ./images/portfolio/poster-new-orlean-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orlean-1200.webp    1x,
+                        ./images/portfolio/poster-new-orlean-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/poster-new-orlean-1200.jpg    1x,
+                        ./images/portfolio/poster-new-orlean-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/poster-new-orlean-1200.jpg"
+                      alt="Постер баскетбольної гри"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -114,11 +213,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img
-                    src="./images/po3.jpg"
-                    alt="Ємблема ресторану"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-seafood-480.webp    1x,
+                        ./images/portfolio/restaurant-seafood-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-seafood-768.webp    1x,
+                        ./images/portfolio/restaurant-seafood-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-seafood-1200.webp    1x,
+                        ./images/portfolio/restaurant-seafood-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/restaurant-seafood-1200.jpg    1x,
+                        ./images/portfolio/restaurant-seafood-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/restaurant-seafood-1200.jpg"
+                      alt="Ресторан з морепродутами"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -134,7 +265,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po4.jpg" alt="Навушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project-prime-480.webp    1x,
+                        ./images/portfolio/project-prime-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/project-prime-768.webp    1x,
+                        ./images/portfolio/project-prime-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/project-prime-1200.webp    1x,
+                        ./images/portfolio/project-prime-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/project-prime-1200.jpg    1x,
+                        ./images/portfolio/project-prime-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/project-prime-1200.jpg"
+                      alt="Зображеня проекту з навушниками"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -150,7 +317,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po5.jpg" alt="Коробки" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project-boxes-480.webp    1x,
+                        ./images/portfolio/project-boxes-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/project-boxes-768.webp    1x,
+                        ./images/portfolio/project-boxes-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/project-boxes-1200.webp    1x,
+                        ./images/portfolio/project-boxes-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/project-boxes-1200.jpg    1x,
+                        ./images/portfolio/project-boxes-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/project-boxes-1200.jpg"
+                      alt="Зображеня проекту з коробками"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -166,7 +369,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po6.jpg" alt="Монітор" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/inspirations-has-no-borders-480.webp    1x,
+                        ./images/portfolio/inspirations-has-no-borders-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/inspirations-has-no-borders-768.webp    1x,
+                        ./images/portfolio/inspirations-has-no-borders-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/inspirations-has-no-borders-1200.webp    1x,
+                        ./images/portfolio/inspirations-has-no-borders-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/inspirations-has-no-borders-1200.jpg    1x,
+                        ./images/portfolio/inspirations-has-no-borders-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/inspirations-has-no-borders-1200.jpg"
+                      alt="Карта точок офісу по світу"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -182,7 +421,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po7.jpg" alt="Книга" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/journal-limited-edition-480.webp    1x,
+                        ./images/portfolio/journal-limited-edition-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/journal-limited-edition-768.webp    1x,
+                        ./images/portfolio/journal-limited-edition-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/journal-limited-edition-1200.webp    1x,
+                        ./images/portfolio/journal-limited-edition-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/journal-limited-edition-1200.jpg    1x,
+                        ./images/portfolio/journal-limited-edition-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/journal-limited-edition-1200.jpg"
+                      alt="Журнал"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -198,7 +473,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po8.jpg" alt="Значок" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project-lab-480.webp    1x,
+                        ./images/portfolio/project-lab-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/project-lab-768.webp    1x,
+                        ./images/portfolio/project-lab-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/project-lab-1200.webp    1x,
+                        ./images/portfolio/project-lab-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/project-lab-1200.jpg    1x,
+                        ./images/portfolio/project-lab-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/project-lab-1200.jpg"
+                      alt="Лейбл"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -214,7 +525,43 @@
             <li class="card__item">
               <a href="#" class="card__link">
                 <div class="product">
-                  <img src="./images/po9.jpg" alt="Ноутбук" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-480.webp    1x,
+                        ./images/portfolio/growing-business-480@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-768.webp    1x,
+                        ./images/portfolio/growing-business-768@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-1200.webp    1x,
+                        ./images/portfolio/growing-business-1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/portfolio/growing-business-1200.jpg    1x,
+                        ./images/portfolio/growing-business-1200@2x.jpg 2x
+                      "
+                      src="./images/portfolio/growing-business-1200.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
                   <p class="product__overlay product__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу

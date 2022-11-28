@@ -1208,7 +1208,7 @@ button {
 .card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
 }
 
 .product__title {
@@ -1226,6 +1226,7 @@ button {
 }
 
 .product-text {
+  flex: 1 0 auto;
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: none;
@@ -1233,11 +1234,20 @@ button {
 }
 
 .card__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  .card__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .card__item:hover, .card__item:focus {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
@@ -1251,6 +1261,10 @@ button {
 
 .card__link {
   text-decoration-line: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  transition: box-shadow var(--general-transition-effect);
 }
 .card__link:hover .product__overlay, .card__link:focus .product__overlay {
   transform: translateY(0);

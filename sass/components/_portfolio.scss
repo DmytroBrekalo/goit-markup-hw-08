@@ -44,7 +44,7 @@
 .card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 30px;
 }
 
 .product__title {
@@ -62,6 +62,7 @@
 }
 
 .product-text {
+    flex: 1 0 auto;
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;
@@ -69,11 +70,18 @@
 }
 
 .card__item {
-    margin-right: 30px;
-    margin-bottom: 30px;
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    flex-basis: 100%;
+    
+        @media screen and (min-width: $tabl) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+    
+        @media screen and (min-width: $desc) {
+            flex-basis: calc((100% - 30px * (3 - 1)) / 3);
+        }
 
     &:hover,
     &:focus {
@@ -89,6 +97,10 @@
 
 .card__link {
     text-decoration-line: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    transition: box-shadow var(--general-transition-effect);
 
     &:hover,
     &:focus {
